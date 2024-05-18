@@ -33,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
               );
               await Future.delayed(const Duration(seconds: 2));
               Navigator.pop(context);
-              Get.to(() => const WebViewScreen());
+              Get.offAll(() => const WebViewScreen());
             },
             child: const Text("WebView")),
       ),
