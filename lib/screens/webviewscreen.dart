@@ -61,15 +61,15 @@ class _WebViewScreenState extends State<WebViewScreen> {
         if (await _webViewController.canGoBack()) {
           _webViewController.goBack();
         } else {
-          Get.to(() => HomeScreen());
+          Get.to(() => const HomeScreen());
         }
       },
       child: Scaffold(
         appBar: AppBar(
-          title: Text("WebView"),
+          title: const Text("WebView"),
           actions: [
             IconButton(
-              icon: Icon(Icons.arrow_back),
+              icon: const Icon(Icons.arrow_back),
               onPressed: () async {
                 if (await _webViewController.canGoBack()) {
                   _webViewController.goBack();
@@ -77,7 +77,7 @@ class _WebViewScreenState extends State<WebViewScreen> {
               },
             ),
             IconButton(
-              icon: Icon(Icons.arrow_forward),
+              icon: const Icon(Icons.arrow_forward),
               onPressed: () async {
                 if (await _webViewController.canGoForward()) {
                   _webViewController.goForward();
@@ -85,7 +85,7 @@ class _WebViewScreenState extends State<WebViewScreen> {
               },
             ),
             IconButton(
-              icon: Icon(Icons.refresh),
+              icon: const Icon(Icons.refresh),
               onPressed: _reloadWebView,
             ),
           ],
